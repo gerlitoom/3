@@ -40,7 +40,19 @@
 			$signupPasswordError="Parool pole piisavalt pikk";
 		}
 		
-
+	if (isset($_POST["signupUsername"]) &&
+		isset($_POST["signupEmail"]) &&
+		isset($_POST["signupPassword"]) &&
+		$signupUsernameError == "" &&
+		$signupEmailError == "" &&
+		$signupPasswordError == ""
+		) {
+		
+		echo "salvestan...<br>";
+		echo "kasutaja ".$signupUsername."<br>";
+		echo "email ".$signupEmail."<br>";
+		echo "parool ".$_POST["signupPassword"]."<br>";
+	}
 		
 ?>
 <!DOCTYPE html>
