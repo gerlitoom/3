@@ -1,5 +1,7 @@
 <?php
 
+	require("../../config.php");
+
 	//var_dump($_GET);
 	//echo "<br>";
 	//var_dump($_POST);
@@ -52,6 +54,13 @@
 		echo "kasutaja ".$signupUsername."<br>";
 		echo "email ".$signupEmail."<br>";
 		echo "parool ".$_POST["signupPassword"]."<br>";
+		$password = hash("sha512", $_POST["signupPassword"]);
+		
+		echo "räsi ".$password."<br>";
+		
+		$database = "if16_gerltoom";
+		$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
+		
 	}
 		
 ?>
