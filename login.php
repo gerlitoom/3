@@ -61,6 +61,19 @@
 		$database = "if16_gerltoom";
 		$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 		
+		$stmt = $mysqli->prepare("INSERT INTO user_sample (username, email, password) VALUES(?, ?, ?)");
+		
+		$stmt->bind_param("sss", $signupUsername, $signupEmail, $password);
+		
+		if ($stmt->execute() ) {
+			
+			echo "salvestamine onnestus";
+			
+		}
+		else {
+			echo "ERROR".$stmt->error;
+		}
+		
 	}
 		
 ?>
