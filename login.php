@@ -91,13 +91,13 @@
 </head>
 <body>
 
-	<h1>Logi sisse</h1><br>
+	<h1>Logi sisse</h1>
 	<form method="POST">
 		<label>Email</label><br>
 		<input name="loginEmail" type="text"><br><br>
 		<label>Parool</label><br>
 		<input name="loginPassword" type="password"><br><br>
-		<input type="submit" value="Logi sisse"><br><br>
+		<input type="submit" value="Logi sisse"><br><br><br>
 	</form>
 	<h2>Loo kasutaja</h2><br>
 		<form method="POST">
